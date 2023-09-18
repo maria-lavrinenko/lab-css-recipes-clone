@@ -5,13 +5,24 @@ html {
   font-size: 16px;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-  margin: 0;
-  padding: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 10;
+  padding: 10;
   font-weight: lighter;
 }
 
@@ -22,3 +33,59 @@ body {
 
 /* STYLES */
 /* Write your CSS below */
+
+header {
+  background-image: url("./../images/apple-pie.jpg");
+  height: 400px;
+  background-size: cover;
+  background-position: 0 0;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-weight: 200;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  text-align: justify;
+  font-family: sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+
+ol {
+  list-style: none;
+}
+ol > li {
+  counter-increment: listcounter;
+}
+ol > li::before {
+  /*3. Set the new style for the list markers */
+  content: counter(listcounter) ")";
+}
+
+.image {
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.text {
+  border-bottom: solid;
+  border-top: solid;
+}
+
+.directions {
+  border-bottom: solid;
+}
